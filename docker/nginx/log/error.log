@@ -1,89 +1,498 @@
-2018/01/25 12:33:59 [error] 1#1: [lua] init_by_lua:10: change tjis default key, please
-2018/01/25 12:33:59 [notice] 1#1: using the "epoll" event method
-2018/01/25 12:33:59 [notice] 1#1: openresty/1.11.2.2
-2018/01/25 12:33:59 [notice] 1#1: built by gcc 5.3.0 (Alpine 5.3.0) 
-2018/01/25 12:33:59 [notice] 1#1: OS: Linux 4.4.0-112-generic
-2018/01/25 12:33:59 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
-2018/01/25 12:33:59 [notice] 1#1: start worker processes
-2018/01/25 12:33:59 [notice] 1#1: start worker process 7
-2018/01/25 12:35:13 [notice] 1#1: signal 15 (SIGTERM) received, exiting
-2018/01/25 12:35:13 [notice] 7#7: exiting
-2018/01/25 12:35:13 [notice] 7#7: exit
-2018/01/25 12:35:13 [notice] 1#1: signal 17 (SIGCHLD) received
-2018/01/25 12:35:13 [notice] 1#1: worker process 7 exited with code 0
-2018/01/25 12:35:13 [notice] 1#1: exit
-2018/01/25 12:35:17 [error] 1#1: [lua] init_by_lua:10: NLA_CONFIG_COOKIE_KEY
-2018/01/25 12:35:17 [notice] 1#1: using the "epoll" event method
-2018/01/25 12:35:17 [notice] 1#1: openresty/1.11.2.2
-2018/01/25 12:35:17 [notice] 1#1: built by gcc 5.3.0 (Alpine 5.3.0) 
-2018/01/25 12:35:17 [notice] 1#1: OS: Linux 4.4.0-112-generic
-2018/01/25 12:35:17 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
-2018/01/25 12:35:17 [notice] 1#1: start worker processes
-2018/01/25 12:35:17 [notice] 1#1: start worker process 7
-2018/01/25 12:35:37 [notice] 1#1: signal 15 (SIGTERM) received, exiting
-2018/01/25 12:35:37 [notice] 7#7: exiting
-2018/01/25 12:35:37 [notice] 7#7: exit
-2018/01/25 12:35:37 [notice] 1#1: signal 17 (SIGCHLD) received
-2018/01/25 12:35:37 [notice] 1#1: worker process 7 exited with code 0
-2018/01/25 12:35:37 [notice] 1#1: exit
-2018/01/25 12:35:41 [error] 1#1: [lua] init_by_lua:10: change tjis default key, please
-2018/01/25 12:35:41 [notice] 1#1: using the "epoll" event method
-2018/01/25 12:35:41 [notice] 1#1: openresty/1.11.2.2
-2018/01/25 12:35:41 [notice] 1#1: built by gcc 5.3.0 (Alpine 5.3.0) 
-2018/01/25 12:35:41 [notice] 1#1: OS: Linux 4.4.0-112-generic
-2018/01/25 12:35:41 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
-2018/01/25 12:35:41 [notice] 1#1: start worker processes
-2018/01/25 12:35:41 [notice] 1#1: start worker process 7
-2018/01/25 12:36:56 [notice] 1#1: signal 15 (SIGTERM) received, exiting
-2018/01/25 12:36:56 [notice] 7#7: exiting
-2018/01/25 12:36:56 [notice] 7#7: exit
-2018/01/25 12:36:57 [notice] 1#1: signal 17 (SIGCHLD) received
-2018/01/25 12:36:57 [notice] 1#1: worker process 7 exited with code 0
-2018/01/25 12:36:57 [notice] 1#1: exit
-2018/01/25 12:37:02 [error] 1#1: init_by_lua error: init_by_lua:10: unexpected symbol near '$'
-2018/01/25 12:45:54 [error] 1#1: init_by_lua error: init_by_lua:10: unexpected symbol near '$'
-2018/01/25 12:48:03 [error] 1#1: init_by_lua error: init_by_lua:10: unexpected symbol near '$'
-2018/01/25 12:48:27 [error] 1#1: init_by_lua error: init_by_lua:10: unexpected symbol near '$'
-2018/01/25 12:51:07 [error] 1#1: [lua] init_by_lua:10: change tjis default key, please
-2018/01/25 12:51:07 [notice] 1#1: using the "epoll" event method
-2018/01/25 12:51:07 [notice] 1#1: openresty/1.11.2.2
-2018/01/25 12:51:07 [notice] 1#1: built by gcc 5.3.0 (Alpine 5.3.0) 
-2018/01/25 12:51:07 [notice] 1#1: OS: Linux 4.4.0-112-generic
-2018/01/25 12:51:07 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
-2018/01/25 12:51:07 [notice] 1#1: start worker processes
-2018/01/25 12:51:07 [notice] 1#1: start worker process 7
-2018/01/25 12:52:00 [notice] 1#1: signal 15 (SIGTERM) received, exiting
-2018/01/25 12:52:00 [notice] 7#7: exiting
-2018/01/25 12:52:00 [notice] 7#7: exit
-2018/01/25 12:52:00 [notice] 1#1: signal 17 (SIGCHLD) received
-2018/01/25 12:52:00 [notice] 1#1: worker process 7 exited with code 0
-2018/01/25 12:52:00 [notice] 1#1: exit
-2018/01/25 12:52:11 [error] 1#1: [lua] init_by_lua:10: change this default key, please
-2018/01/25 12:52:11 [notice] 1#1: using the "epoll" event method
-2018/01/25 12:52:11 [notice] 1#1: openresty/1.11.2.2
-2018/01/25 12:52:11 [notice] 1#1: built by gcc 5.3.0 (Alpine 5.3.0) 
-2018/01/25 12:52:11 [notice] 1#1: OS: Linux 4.4.0-112-generic
-2018/01/25 12:52:11 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
-2018/01/25 12:52:11 [notice] 1#1: start worker processes
-2018/01/25 12:52:11 [notice] 1#1: start worker process 7
-2018/01/25 12:53:57 [notice] 1#1: signal 15 (SIGTERM) received, exiting
-2018/01/25 12:53:57 [notice] 7#7: exiting
-2018/01/25 12:53:57 [notice] 7#7: exit
-2018/01/25 12:53:57 [notice] 1#1: signal 17 (SIGCHLD) received
-2018/01/25 12:53:57 [notice] 1#1: worker process 7 exited with code 0
-2018/01/25 12:53:57 [notice] 1#1: exit
-2018/01/25 12:56:52 [error] 1#1: init_by_lua error: init_by_lua:10: unexpected symbol near '['
-2018/01/25 12:57:15 [error] 1#1: init_by_lua error: init_by_lua:10: unexpected symbol near '['
-2018/01/25 12:58:16 [notice] 1#1: using the "epoll" event method
-2018/01/25 12:58:16 [notice] 1#1: openresty/1.11.2.2
-2018/01/25 12:58:16 [notice] 1#1: built by gcc 5.3.0 (Alpine 5.3.0) 
-2018/01/25 12:58:16 [notice] 1#1: OS: Linux 4.4.0-112-generic
-2018/01/25 12:58:16 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
-2018/01/25 12:58:16 [notice] 1#1: start worker processes
-2018/01/25 12:58:16 [notice] 1#1: start worker process 6
-2018/01/25 13:07:24 [notice] 1#1: signal 15 (SIGTERM) received, exiting
-2018/01/25 13:07:24 [notice] 6#6: exiting
-2018/01/25 13:07:24 [notice] 6#6: exit
-2018/01/25 13:07:24 [notice] 1#1: signal 17 (SIGCHLD) received
-2018/01/25 13:07:24 [notice] 1#1: worker process 6 exited with code 0
-2018/01/25 13:07:24 [notice] 1#1: exit
+2018/01/25 13:19:30 [notice] 1#1: using the "epoll" event method
+2018/01/25 13:19:30 [notice] 1#1: openresty/1.11.2.2
+2018/01/25 13:19:30 [notice] 1#1: built by gcc 5.3.0 (Alpine 5.3.0) 
+2018/01/25 13:19:30 [notice] 1#1: OS: Linux 4.4.0-112-generic
+2018/01/25 13:19:30 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2018/01/25 13:19:30 [notice] 1#1: start worker processes
+2018/01/25 13:19:30 [notice] 1#1: start worker process 7
+2018/01/25 13:29:23 [notice] 1#1: signal 15 (SIGTERM) received, exiting
+2018/01/25 13:29:23 [notice] 7#7: exiting
+2018/01/25 13:29:23 [notice] 7#7: exit
+2018/01/25 13:29:23 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 13:29:23 [notice] 1#1: worker process 7 exited with code 0
+2018/01/25 13:29:23 [notice] 1#1: exit
+2018/01/25 13:32:08 [notice] 1#1: using the "epoll" event method
+2018/01/25 13:32:08 [notice] 1#1: openresty/1.11.2.2
+2018/01/25 13:32:08 [notice] 1#1: built by gcc 5.3.0 (Alpine 5.3.0) 
+2018/01/25 13:32:08 [notice] 1#1: OS: Linux 4.4.0-112-generic
+2018/01/25 13:32:08 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2018/01/25 13:32:08 [notice] 1#1: start worker processes
+2018/01/25 13:32:08 [notice] 1#1: start worker process 7
+2018/01/25 13:32:08 [notice] 1#1: start worker process 8
+2018/01/25 13:32:08 [notice] 1#1: start worker process 9
+2018/01/25 13:32:08 [notice] 1#1: start worker process 10
+2018/01/25 13:32:22 [crit] 7#7: *1 connect() to unix:/sock/docker.sock failed (2: No such file or directory) while connecting to upstream, client: 172.18.0.1, server: local, request: "GET /123 HTTP/1.1", upstream: "fastcgi://unix:/sock/docker.sock:", host: "local:8003"
+2018/01/25 13:33:31 [notice] 1#1: signal 15 (SIGTERM) received, exiting
+2018/01/25 13:33:31 [notice] 8#8: exiting
+2018/01/25 13:33:31 [notice] 7#7: exiting
+2018/01/25 13:33:31 [notice] 7#7: exit
+2018/01/25 13:33:31 [notice] 8#8: exit
+2018/01/25 13:33:31 [notice] 9#9: exiting
+2018/01/25 13:33:31 [notice] 10#10: exiting
+2018/01/25 13:33:31 [notice] 9#9: exit
+2018/01/25 13:33:31 [notice] 10#10: exit
+2018/01/25 13:33:31 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 13:33:31 [notice] 1#1: worker process 8 exited with code 0
+2018/01/25 13:33:31 [notice] 1#1: worker process 10 exited with code 0
+2018/01/25 13:33:31 [notice] 1#1: signal 29 (SIGIO) received
+2018/01/25 13:33:31 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 13:33:31 [notice] 1#1: worker process 9 exited with code 0
+2018/01/25 13:33:31 [notice] 1#1: worker process 7 exited with code 0
+2018/01/25 13:33:31 [notice] 1#1: exit
+2018/01/25 13:33:35 [notice] 1#1: using the "epoll" event method
+2018/01/25 13:33:35 [notice] 1#1: openresty/1.11.2.2
+2018/01/25 13:33:35 [notice] 1#1: built by gcc 5.3.0 (Alpine 5.3.0) 
+2018/01/25 13:33:35 [notice] 1#1: OS: Linux 4.4.0-112-generic
+2018/01/25 13:33:35 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2018/01/25 13:33:35 [notice] 1#1: start worker processes
+2018/01/25 13:33:35 [notice] 1#1: start worker process 7
+2018/01/25 13:33:35 [notice] 1#1: start worker process 8
+2018/01/25 13:33:35 [notice] 1#1: start worker process 9
+2018/01/25 13:33:35 [notice] 1#1: start worker process 10
+2018/01/25 13:33:46 [crit] 7#7: *1 connect() to unix:/sock/docker.sock failed (2: No such file or directory) while connecting to upstream, client: 172.18.0.1, server: local, request: "GET /123 HTTP/1.1", upstream: "fastcgi://unix:/sock/docker.sock:", host: "local:8003"
+2018/01/25 13:35:01 [notice] 1#1: signal 15 (SIGTERM) received, exiting
+2018/01/25 13:35:01 [notice] 7#7: exiting
+2018/01/25 13:35:01 [notice] 8#8: exiting
+2018/01/25 13:35:01 [notice] 9#9: exiting
+2018/01/25 13:35:01 [notice] 7#7: exit
+2018/01/25 13:35:01 [notice] 9#9: exit
+2018/01/25 13:35:01 [notice] 8#8: exit
+2018/01/25 13:35:01 [notice] 10#10: exiting
+2018/01/25 13:35:01 [notice] 10#10: exit
+2018/01/25 13:35:01 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 13:35:01 [notice] 1#1: worker process 7 exited with code 0
+2018/01/25 13:35:01 [notice] 1#1: signal 29 (SIGIO) received
+2018/01/25 13:35:01 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 13:35:01 [notice] 1#1: worker process 8 exited with code 0
+2018/01/25 13:35:01 [notice] 1#1: signal 29 (SIGIO) received
+2018/01/25 13:35:01 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 13:35:01 [notice] 1#1: worker process 10 exited with code 0
+2018/01/25 13:35:01 [notice] 1#1: signal 29 (SIGIO) received
+2018/01/25 13:35:01 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 13:35:01 [notice] 1#1: worker process 9 exited with code 0
+2018/01/25 13:35:01 [notice] 1#1: exit
+2018/01/25 13:35:05 [notice] 1#1: using the "epoll" event method
+2018/01/25 13:35:05 [notice] 1#1: openresty/1.11.2.2
+2018/01/25 13:35:05 [notice] 1#1: built by gcc 5.3.0 (Alpine 5.3.0) 
+2018/01/25 13:35:05 [notice] 1#1: OS: Linux 4.4.0-112-generic
+2018/01/25 13:35:05 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2018/01/25 13:35:05 [notice] 1#1: start worker processes
+2018/01/25 13:35:05 [notice] 1#1: start worker process 7
+2018/01/25 13:35:05 [notice] 1#1: start worker process 8
+2018/01/25 13:35:05 [notice] 1#1: start worker process 9
+2018/01/25 13:35:05 [notice] 1#1: start worker process 10
+2018/01/25 13:36:31 [notice] 1#1: signal 15 (SIGTERM) received, exiting
+2018/01/25 13:36:31 [notice] 9#9: exiting
+2018/01/25 13:36:31 [notice] 8#8: exiting
+2018/01/25 13:36:31 [notice] 8#8: exit
+2018/01/25 13:36:31 [notice] 9#9: exit
+2018/01/25 13:36:31 [notice] 7#7: exiting
+2018/01/25 13:36:31 [notice] 7#7: exit
+2018/01/25 13:36:31 [notice] 10#10: exiting
+2018/01/25 13:36:31 [notice] 10#10: exit
+2018/01/25 13:36:31 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 13:36:31 [notice] 1#1: worker process 8 exited with code 0
+2018/01/25 13:36:31 [notice] 1#1: worker process 9 exited with code 0
+2018/01/25 13:36:31 [notice] 1#1: signal 29 (SIGIO) received
+2018/01/25 13:36:31 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 13:36:31 [notice] 1#1: worker process 7 exited with code 0
+2018/01/25 13:36:31 [notice] 1#1: worker process 10 exited with code 0
+2018/01/25 13:36:31 [notice] 1#1: exit
+2018/01/25 13:36:35 [notice] 1#1: using the "epoll" event method
+2018/01/25 13:36:35 [notice] 1#1: openresty/1.11.2.2
+2018/01/25 13:36:35 [notice] 1#1: built by gcc 5.3.0 (Alpine 5.3.0) 
+2018/01/25 13:36:35 [notice] 1#1: OS: Linux 4.4.0-112-generic
+2018/01/25 13:36:35 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2018/01/25 13:36:35 [notice] 1#1: start worker processes
+2018/01/25 13:36:35 [notice] 1#1: start worker process 7
+2018/01/25 13:36:35 [notice] 1#1: start worker process 8
+2018/01/25 13:36:35 [notice] 1#1: start worker process 9
+2018/01/25 13:36:35 [notice] 1#1: start worker process 10
+2018/01/25 13:36:58 [crit] 8#8: *1 connect() to unix:/sock/docker.sock failed (13: Permission denied) while connecting to upstream, client: 172.18.0.1, server: local, request: "GET /123 HTTP/1.1", upstream: "fastcgi://unix:/sock/docker.sock:", host: "local:8003"
+2018/01/25 13:37:55 [notice] 1#1: signal 15 (SIGTERM) received, exiting
+2018/01/25 13:37:55 [notice] 7#7: exiting
+2018/01/25 13:37:55 [notice] 8#8: exiting
+2018/01/25 13:37:55 [notice] 9#9: exiting
+2018/01/25 13:37:55 [notice] 8#8: exit
+2018/01/25 13:37:55 [notice] 9#9: exit
+2018/01/25 13:37:55 [notice] 7#7: exit
+2018/01/25 13:37:55 [notice] 10#10: exiting
+2018/01/25 13:37:55 [notice] 10#10: exit
+2018/01/25 13:37:55 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 13:37:55 [notice] 1#1: worker process 9 exited with code 0
+2018/01/25 13:37:55 [notice] 1#1: signal 29 (SIGIO) received
+2018/01/25 13:37:55 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 13:37:55 [notice] 1#1: worker process 7 exited with code 0
+2018/01/25 13:37:55 [notice] 1#1: signal 29 (SIGIO) received
+2018/01/25 13:37:55 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 13:37:55 [notice] 1#1: worker process 8 exited with code 0
+2018/01/25 13:37:55 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 13:37:55 [notice] 1#1: worker process 10 exited with code 0
+2018/01/25 13:37:55 [notice] 1#1: exit
+2018/01/25 13:38:00 [notice] 1#1: using the "epoll" event method
+2018/01/25 13:38:00 [notice] 1#1: openresty/1.11.2.2
+2018/01/25 13:38:00 [notice] 1#1: built by gcc 5.3.0 (Alpine 5.3.0) 
+2018/01/25 13:38:00 [notice] 1#1: OS: Linux 4.4.0-112-generic
+2018/01/25 13:38:00 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2018/01/25 13:38:00 [notice] 1#1: start worker processes
+2018/01/25 13:38:00 [notice] 1#1: start worker process 7
+2018/01/25 13:38:00 [notice] 1#1: start worker process 8
+2018/01/25 13:38:00 [notice] 1#1: start worker process 9
+2018/01/25 13:38:00 [notice] 1#1: start worker process 10
+2018/01/25 13:44:54 [notice] 1#1: signal 15 (SIGTERM) received, exiting
+2018/01/25 13:44:54 [notice] 8#8: exiting
+2018/01/25 13:44:54 [notice] 7#7: exiting
+2018/01/25 13:44:54 [notice] 7#7: exit
+2018/01/25 13:44:54 [notice] 8#8: exit
+2018/01/25 13:44:54 [notice] 10#10: exiting
+2018/01/25 13:44:54 [notice] 10#10: exit
+2018/01/25 13:44:54 [notice] 9#9: exiting
+2018/01/25 13:44:54 [notice] 9#9: exit
+2018/01/25 13:44:54 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 13:44:54 [notice] 1#1: worker process 7 exited with code 0
+2018/01/25 13:44:54 [notice] 1#1: worker process 8 exited with code 0
+2018/01/25 13:44:54 [notice] 1#1: worker process 10 exited with code 0
+2018/01/25 13:44:54 [notice] 1#1: signal 29 (SIGIO) received
+2018/01/25 13:44:54 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 13:44:54 [notice] 1#1: worker process 9 exited with code 0
+2018/01/25 13:44:54 [notice] 1#1: exit
+2018/01/25 14:04:32 [notice] 1#1: using the "epoll" event method
+2018/01/25 14:04:32 [notice] 1#1: openresty/1.11.2.2
+2018/01/25 14:04:32 [notice] 1#1: built by gcc 5.3.0 (Alpine 5.3.0) 
+2018/01/25 14:04:32 [notice] 1#1: OS: Linux 4.4.0-112-generic
+2018/01/25 14:04:32 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2018/01/25 14:04:32 [notice] 1#1: start worker processes
+2018/01/25 14:04:32 [notice] 1#1: start worker process 7
+2018/01/25 14:04:32 [notice] 1#1: start worker process 8
+2018/01/25 14:04:32 [notice] 1#1: start worker process 9
+2018/01/25 14:04:32 [notice] 1#1: start worker process 10
+2018/01/25 14:05:00 [notice] 1#1: signal 15 (SIGTERM) received, exiting
+2018/01/25 14:05:00 [notice] 7#7: exiting
+2018/01/25 14:05:00 [notice] 7#7: exit
+2018/01/25 14:05:00 [notice] 8#8: exiting
+2018/01/25 14:05:00 [notice] 8#8: exit
+2018/01/25 14:05:00 [notice] 9#9: exiting
+2018/01/25 14:05:00 [notice] 9#9: exit
+2018/01/25 14:05:00 [notice] 10#10: exiting
+2018/01/25 14:05:00 [notice] 10#10: exit
+2018/01/25 14:05:00 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 14:05:00 [notice] 1#1: worker process 7 exited with code 0
+2018/01/25 14:05:00 [notice] 1#1: worker process 8 exited with code 0
+2018/01/25 14:05:00 [notice] 1#1: worker process 10 exited with code 0
+2018/01/25 14:05:00 [notice] 1#1: signal 29 (SIGIO) received
+2018/01/25 14:05:00 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 14:05:00 [notice] 1#1: worker process 9 exited with code 0
+2018/01/25 14:05:00 [notice] 1#1: exit
+2018/01/25 14:05:04 [notice] 1#1: using the "epoll" event method
+2018/01/25 14:05:04 [notice] 1#1: openresty/1.11.2.2
+2018/01/25 14:05:04 [notice] 1#1: built by gcc 5.3.0 (Alpine 5.3.0) 
+2018/01/25 14:05:04 [notice] 1#1: OS: Linux 4.4.0-112-generic
+2018/01/25 14:05:04 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2018/01/25 14:05:04 [notice] 1#1: start worker processes
+2018/01/25 14:05:04 [notice] 1#1: start worker process 7
+2018/01/25 14:05:04 [notice] 1#1: start worker process 8
+2018/01/25 14:05:04 [notice] 1#1: start worker process 9
+2018/01/25 14:05:04 [notice] 1#1: start worker process 10
+2018/01/25 14:05:28 [notice] 1#1: signal 15 (SIGTERM) received, exiting
+2018/01/25 14:05:28 [notice] 7#7: exiting
+2018/01/25 14:05:28 [notice] 8#8: exiting
+2018/01/25 14:05:28 [notice] 7#7: exit
+2018/01/25 14:05:28 [notice] 8#8: exit
+2018/01/25 14:05:28 [notice] 9#9: exiting
+2018/01/25 14:05:28 [notice] 10#10: exiting
+2018/01/25 14:05:28 [notice] 9#9: exit
+2018/01/25 14:05:28 [notice] 10#10: exit
+2018/01/25 14:05:29 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 14:05:29 [notice] 1#1: worker process 7 exited with code 0
+2018/01/25 14:05:29 [notice] 1#1: worker process 9 exited with code 0
+2018/01/25 14:05:29 [notice] 1#1: worker process 10 exited with code 0
+2018/01/25 14:05:29 [notice] 1#1: signal 29 (SIGIO) received
+2018/01/25 14:05:29 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 14:05:29 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 14:05:29 [notice] 1#1: worker process 8 exited with code 0
+2018/01/25 14:05:29 [notice] 1#1: exit
+2018/01/25 14:05:40 [notice] 1#1: using the "epoll" event method
+2018/01/25 14:05:40 [notice] 1#1: openresty/1.11.2.2
+2018/01/25 14:05:40 [notice] 1#1: built by gcc 5.3.0 (Alpine 5.3.0) 
+2018/01/25 14:05:40 [notice] 1#1: OS: Linux 4.4.0-112-generic
+2018/01/25 14:05:40 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2018/01/25 14:05:40 [notice] 1#1: start worker processes
+2018/01/25 14:05:40 [notice] 1#1: start worker process 6
+2018/01/25 14:05:40 [notice] 1#1: start worker process 7
+2018/01/25 14:05:40 [notice] 1#1: start worker process 8
+2018/01/25 14:05:40 [notice] 1#1: start worker process 9
+2018/01/25 14:06:13 [notice] 1#1: signal 15 (SIGTERM) received, exiting
+2018/01/25 14:06:13 [notice] 7#7: exiting
+2018/01/25 14:06:13 [notice] 8#8: exiting
+2018/01/25 14:06:13 [notice] 6#6: exiting
+2018/01/25 14:06:13 [notice] 6#6: exit
+2018/01/25 14:06:13 [notice] 7#7: exit
+2018/01/25 14:06:13 [notice] 8#8: exit
+2018/01/25 14:06:13 [notice] 9#9: exiting
+2018/01/25 14:06:13 [notice] 9#9: exit
+2018/01/25 14:06:13 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 14:06:13 [notice] 1#1: worker process 6 exited with code 0
+2018/01/25 14:06:13 [notice] 1#1: signal 29 (SIGIO) received
+2018/01/25 14:06:14 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 14:06:14 [notice] 1#1: worker process 7 exited with code 0
+2018/01/25 14:06:14 [notice] 1#1: worker process 9 exited with code 0
+2018/01/25 14:06:14 [notice] 1#1: signal 29 (SIGIO) received
+2018/01/25 14:06:14 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 14:06:14 [notice] 1#1: worker process 8 exited with code 0
+2018/01/25 14:06:14 [notice] 1#1: exit
+2018/01/25 14:09:14 [notice] 1#1: using the "epoll" event method
+2018/01/25 14:09:14 [notice] 1#1: openresty/1.11.2.2
+2018/01/25 14:09:14 [notice] 1#1: built by gcc 5.3.0 (Alpine 5.3.0) 
+2018/01/25 14:09:14 [notice] 1#1: OS: Linux 4.4.0-112-generic
+2018/01/25 14:09:14 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2018/01/25 14:09:14 [notice] 1#1: start worker processes
+2018/01/25 14:09:14 [notice] 1#1: start worker process 7
+2018/01/25 14:09:14 [notice] 1#1: start worker process 8
+2018/01/25 14:09:14 [notice] 1#1: start worker process 9
+2018/01/25 14:09:14 [notice] 1#1: start worker process 10
+2018/01/25 14:09:21 [notice] 1#1: signal 15 (SIGTERM) received, exiting
+2018/01/25 14:09:21 [notice] 10#10: exiting
+2018/01/25 14:09:21 [notice] 10#10: exit
+2018/01/25 14:09:21 [notice] 7#7: exiting
+2018/01/25 14:09:21 [notice] 7#7: exit
+2018/01/25 14:09:21 [notice] 8#8: exiting
+2018/01/25 14:09:21 [notice] 8#8: exit
+2018/01/25 14:09:21 [notice] 9#9: exiting
+2018/01/25 14:09:21 [notice] 9#9: exit
+2018/01/25 14:09:21 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 14:09:21 [notice] 1#1: worker process 8 exited with code 0
+2018/01/25 14:09:21 [notice] 1#1: worker process 10 exited with code 0
+2018/01/25 14:09:21 [notice] 1#1: signal 29 (SIGIO) received
+2018/01/25 14:09:21 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 14:09:21 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 14:09:21 [notice] 1#1: worker process 9 exited with code 0
+2018/01/25 14:09:21 [notice] 1#1: signal 29 (SIGIO) received
+2018/01/25 14:09:21 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 14:09:21 [notice] 1#1: worker process 7 exited with code 0
+2018/01/25 14:09:21 [notice] 1#1: exit
+2018/01/25 14:09:30 [notice] 1#1: using the "epoll" event method
+2018/01/25 14:09:30 [notice] 1#1: openresty/1.11.2.2
+2018/01/25 14:09:30 [notice] 1#1: built by gcc 5.3.0 (Alpine 5.3.0) 
+2018/01/25 14:09:30 [notice] 1#1: OS: Linux 4.4.0-112-generic
+2018/01/25 14:09:30 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2018/01/25 14:09:30 [notice] 1#1: start worker processes
+2018/01/25 14:09:30 [notice] 1#1: start worker process 7
+2018/01/25 14:09:30 [notice] 1#1: start worker process 8
+2018/01/25 14:09:30 [notice] 1#1: start worker process 9
+2018/01/25 14:09:30 [notice] 1#1: start worker process 10
+2018/01/25 14:10:01 [notice] 1#1: signal 15 (SIGTERM) received, exiting
+2018/01/25 14:10:01 [notice] 7#7: exiting
+2018/01/25 14:10:01 [notice] 9#9: exiting
+2018/01/25 14:10:01 [notice] 7#7: exit
+2018/01/25 14:10:01 [notice] 9#9: exit
+2018/01/25 14:10:01 [notice] 8#8: exiting
+2018/01/25 14:10:01 [notice] 8#8: exit
+2018/01/25 14:10:01 [notice] 10#10: exiting
+2018/01/25 14:10:01 [notice] 10#10: exit
+2018/01/25 14:10:01 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 14:10:01 [notice] 1#1: worker process 7 exited with code 0
+2018/01/25 14:10:01 [notice] 1#1: signal 29 (SIGIO) received
+2018/01/25 14:10:01 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 14:10:01 [notice] 1#1: worker process 9 exited with code 0
+2018/01/25 14:10:01 [notice] 1#1: worker process 10 exited with code 0
+2018/01/25 14:10:01 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 14:10:01 [notice] 1#1: worker process 8 exited with code 0
+2018/01/25 14:10:01 [notice] 1#1: exit
+2018/01/25 14:10:10 [notice] 1#1: using the "epoll" event method
+2018/01/25 14:10:10 [notice] 1#1: openresty/1.11.2.2
+2018/01/25 14:10:10 [notice] 1#1: built by gcc 5.3.0 (Alpine 5.3.0) 
+2018/01/25 14:10:10 [notice] 1#1: OS: Linux 4.4.0-112-generic
+2018/01/25 14:10:10 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2018/01/25 14:10:10 [notice] 1#1: start worker processes
+2018/01/25 14:10:10 [notice] 1#1: start worker process 7
+2018/01/25 14:10:10 [notice] 1#1: start worker process 8
+2018/01/25 14:10:10 [notice] 1#1: start worker process 9
+2018/01/25 14:10:10 [notice] 1#1: start worker process 10
+2018/01/25 14:10:38 [notice] 1#1: signal 15 (SIGTERM) received, exiting
+2018/01/25 14:10:38 [notice] 8#8: exiting
+2018/01/25 14:10:38 [notice] 9#9: exiting
+2018/01/25 14:10:38 [notice] 7#7: exiting
+2018/01/25 14:10:38 [notice] 7#7: exit
+2018/01/25 14:10:38 [notice] 9#9: exit
+2018/01/25 14:10:38 [notice] 8#8: exit
+2018/01/25 14:10:38 [notice] 10#10: exiting
+2018/01/25 14:10:38 [notice] 10#10: exit
+2018/01/25 14:10:38 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 14:10:38 [notice] 1#1: worker process 8 exited with code 0
+2018/01/25 14:10:38 [notice] 1#1: signal 29 (SIGIO) received
+2018/01/25 14:10:38 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 14:10:38 [notice] 1#1: worker process 9 exited with code 0
+2018/01/25 14:10:38 [notice] 1#1: signal 29 (SIGIO) received
+2018/01/25 14:10:38 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 14:10:38 [notice] 1#1: worker process 10 exited with code 0
+2018/01/25 14:10:38 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 14:10:38 [notice] 1#1: worker process 7 exited with code 0
+2018/01/25 14:10:38 [notice] 1#1: exit
+2018/01/25 14:18:47 [notice] 1#1: using the "epoll" event method
+2018/01/25 14:18:47 [notice] 1#1: openresty/1.11.2.2
+2018/01/25 14:18:47 [notice] 1#1: built by gcc 5.3.0 (Alpine 5.3.0) 
+2018/01/25 14:18:47 [notice] 1#1: OS: Linux 4.4.0-112-generic
+2018/01/25 14:18:47 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2018/01/25 14:18:47 [notice] 1#1: start worker processes
+2018/01/25 14:18:47 [notice] 1#1: start worker process 7
+2018/01/25 14:18:47 [notice] 1#1: start worker process 8
+2018/01/25 14:18:47 [notice] 1#1: start worker process 9
+2018/01/25 14:18:47 [notice] 1#1: start worker process 10
+2018/01/25 14:19:15 [notice] 1#1: signal 15 (SIGTERM) received, exiting
+2018/01/25 14:19:15 [notice] 7#7: exiting
+2018/01/25 14:19:15 [notice] 8#8: exiting
+2018/01/25 14:19:15 [notice] 9#9: exiting
+2018/01/25 14:19:15 [notice] 7#7: exit
+2018/01/25 14:19:15 [notice] 8#8: exit
+2018/01/25 14:19:15 [notice] 9#9: exit
+2018/01/25 14:19:15 [notice] 10#10: exiting
+2018/01/25 14:19:15 [notice] 10#10: exit
+2018/01/25 14:19:15 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 14:19:15 [notice] 1#1: worker process 7 exited with code 0
+2018/01/25 14:19:15 [notice] 1#1: signal 29 (SIGIO) received
+2018/01/25 14:19:15 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 14:19:15 [notice] 1#1: worker process 8 exited with code 0
+2018/01/25 14:19:15 [notice] 1#1: signal 29 (SIGIO) received
+2018/01/25 14:19:15 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 14:19:15 [notice] 1#1: worker process 9 exited with code 0
+2018/01/25 14:19:15 [notice] 1#1: worker process 10 exited with code 0
+2018/01/25 14:19:15 [notice] 1#1: exit
+2018/01/25 14:19:27 [notice] 1#1: using the "epoll" event method
+2018/01/25 14:19:27 [notice] 1#1: openresty/1.11.2.2
+2018/01/25 14:19:27 [notice] 1#1: built by gcc 5.3.0 (Alpine 5.3.0) 
+2018/01/25 14:19:27 [notice] 1#1: OS: Linux 4.4.0-112-generic
+2018/01/25 14:19:27 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2018/01/25 14:19:27 [notice] 1#1: start worker processes
+2018/01/25 14:19:27 [notice] 1#1: start worker process 7
+2018/01/25 14:19:27 [notice] 1#1: start worker process 8
+2018/01/25 14:19:27 [notice] 1#1: start worker process 9
+2018/01/25 14:19:27 [notice] 1#1: start worker process 10
+2018/01/25 14:20:28 [notice] 1#1: signal 15 (SIGTERM) received, exiting
+2018/01/25 14:20:28 [notice] 7#7: exiting
+2018/01/25 14:20:28 [notice] 7#7: exit
+2018/01/25 14:20:28 [notice] 8#8: exiting
+2018/01/25 14:20:28 [notice] 9#9: exiting
+2018/01/25 14:20:28 [notice] 9#9: exit
+2018/01/25 14:20:28 [notice] 8#8: exit
+2018/01/25 14:20:28 [notice] 10#10: exiting
+2018/01/25 14:20:28 [notice] 10#10: exit
+2018/01/25 14:20:28 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 14:20:28 [notice] 1#1: worker process 7 exited with code 0
+2018/01/25 14:20:28 [notice] 1#1: worker process 9 exited with code 0
+2018/01/25 14:20:28 [notice] 1#1: worker process 10 exited with code 0
+2018/01/25 14:20:28 [notice] 1#1: signal 29 (SIGIO) received
+2018/01/25 14:20:28 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 14:20:28 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 14:20:28 [notice] 1#1: worker process 8 exited with code 0
+2018/01/25 14:20:28 [notice] 1#1: exit
+2018/01/25 14:20:34 [notice] 1#1: using the "epoll" event method
+2018/01/25 14:20:34 [notice] 1#1: openresty/1.11.2.2
+2018/01/25 14:20:34 [notice] 1#1: built by gcc 5.3.0 (Alpine 5.3.0) 
+2018/01/25 14:20:34 [notice] 1#1: OS: Linux 4.4.0-112-generic
+2018/01/25 14:20:34 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2018/01/25 14:20:34 [notice] 1#1: start worker processes
+2018/01/25 14:20:34 [notice] 1#1: start worker process 7
+2018/01/25 14:20:34 [notice] 1#1: start worker process 8
+2018/01/25 14:20:34 [notice] 1#1: start worker process 9
+2018/01/25 14:20:34 [notice] 1#1: start worker process 10
+2018/01/25 14:24:16 [notice] 1#1: signal 15 (SIGTERM) received, exiting
+2018/01/25 14:24:16 [notice] 7#7: exiting
+2018/01/25 14:24:16 [notice] 7#7: exit
+2018/01/25 14:24:16 [notice] 8#8: exiting
+2018/01/25 14:24:16 [notice] 9#9: exiting
+2018/01/25 14:24:16 [notice] 9#9: exit
+2018/01/25 14:24:16 [notice] 8#8: exit
+2018/01/25 14:24:16 [notice] 10#10: exiting
+2018/01/25 14:24:16 [notice] 10#10: exit
+2018/01/25 14:24:16 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 14:24:16 [notice] 1#1: worker process 8 exited with code 0
+2018/01/25 14:24:16 [notice] 1#1: signal 29 (SIGIO) received
+2018/01/25 14:24:16 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 14:24:16 [notice] 1#1: worker process 9 exited with code 0
+2018/01/25 14:24:16 [notice] 1#1: worker process 7 exited with code 0
+2018/01/25 14:24:16 [notice] 1#1: worker process 10 exited with code 0
+2018/01/25 14:24:16 [notice] 1#1: exit
+2018/01/25 14:24:27 [notice] 1#1: using the "epoll" event method
+2018/01/25 14:24:27 [notice] 1#1: openresty/1.11.2.2
+2018/01/25 14:24:27 [notice] 1#1: built by gcc 5.3.0 (Alpine 5.3.0) 
+2018/01/25 14:24:27 [notice] 1#1: OS: Linux 4.4.0-112-generic
+2018/01/25 14:24:27 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2018/01/25 14:24:27 [notice] 1#1: start worker processes
+2018/01/25 14:24:27 [notice] 1#1: start worker process 7
+2018/01/25 14:24:27 [notice] 1#1: start worker process 8
+2018/01/25 14:24:27 [notice] 1#1: start worker process 9
+2018/01/25 14:24:27 [notice] 1#1: start worker process 10
+2018/01/25 14:25:38 [notice] 1#1: signal 15 (SIGTERM) received, exiting
+2018/01/25 14:25:38 [notice] 7#7: exiting
+2018/01/25 14:25:38 [notice] 7#7: exit
+2018/01/25 14:25:38 [notice] 8#8: exiting
+2018/01/25 14:25:38 [notice] 9#9: exiting
+2018/01/25 14:25:38 [notice] 9#9: exit
+2018/01/25 14:25:38 [notice] 8#8: exit
+2018/01/25 14:25:38 [notice] 10#10: exiting
+2018/01/25 14:25:38 [notice] 10#10: exit
+2018/01/25 14:25:38 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 14:25:38 [notice] 1#1: worker process 8 exited with code 0
+2018/01/25 14:25:38 [notice] 1#1: worker process 9 exited with code 0
+2018/01/25 14:25:38 [notice] 1#1: signal 29 (SIGIO) received
+2018/01/25 14:25:38 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 14:25:38 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 14:25:38 [notice] 1#1: worker process 10 exited with code 0
+2018/01/25 14:25:38 [notice] 1#1: signal 29 (SIGIO) received
+2018/01/25 14:25:38 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 14:25:38 [notice] 1#1: worker process 7 exited with code 0
+2018/01/25 14:25:38 [notice] 1#1: exit
+2018/01/25 14:25:43 [notice] 1#1: using the "epoll" event method
+2018/01/25 14:25:43 [notice] 1#1: openresty/1.11.2.2
+2018/01/25 14:25:43 [notice] 1#1: built by gcc 5.3.0 (Alpine 5.3.0) 
+2018/01/25 14:25:43 [notice] 1#1: OS: Linux 4.4.0-112-generic
+2018/01/25 14:25:43 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2018/01/25 14:25:43 [notice] 1#1: start worker processes
+2018/01/25 14:25:43 [notice] 1#1: start worker process 7
+2018/01/25 14:25:43 [notice] 1#1: start worker process 8
+2018/01/25 14:25:43 [notice] 1#1: start worker process 9
+2018/01/25 14:25:43 [notice] 1#1: start worker process 10
+2018/01/25 14:25:52 [crit] 7#7: *1 connect() to unix:/sock/docker.sock failed (13: Permission denied) while connecting to upstream, client: 172.18.0.1, server: local, request: "GET /a.php9998888 HTTP/1.1", upstream: "fastcgi://unix:/sock/docker.sock:", host: "local:8003"
+2018/01/25 14:26:05 [notice] 1#1: signal 15 (SIGTERM) received, exiting
+2018/01/25 14:26:05 [notice] 7#7: exiting
+2018/01/25 14:26:05 [notice] 7#7: exit
+2018/01/25 14:26:05 [notice] 8#8: exiting
+2018/01/25 14:26:05 [notice] 9#9: exiting
+2018/01/25 14:26:05 [notice] 9#9: exit
+2018/01/25 14:26:05 [notice] 8#8: exit
+2018/01/25 14:26:05 [notice] 10#10: exiting
+2018/01/25 14:26:05 [notice] 10#10: exit
+2018/01/25 14:26:05 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 14:26:05 [notice] 1#1: worker process 7 exited with code 0
+2018/01/25 14:26:05 [notice] 1#1: worker process 8 exited with code 0
+2018/01/25 14:26:05 [notice] 1#1: worker process 9 exited with code 0
+2018/01/25 14:26:05 [notice] 1#1: worker process 10 exited with code 0
+2018/01/25 14:26:05 [notice] 1#1: exit
+2018/01/25 14:26:15 [notice] 1#1: using the "epoll" event method
+2018/01/25 14:26:15 [notice] 1#1: openresty/1.11.2.2
+2018/01/25 14:26:15 [notice] 1#1: built by gcc 5.3.0 (Alpine 5.3.0) 
+2018/01/25 14:26:15 [notice] 1#1: OS: Linux 4.4.0-112-generic
+2018/01/25 14:26:15 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2018/01/25 14:26:15 [notice] 1#1: start worker processes
+2018/01/25 14:26:15 [notice] 1#1: start worker process 7
+2018/01/25 14:26:15 [notice] 1#1: start worker process 8
+2018/01/25 14:26:15 [notice] 1#1: start worker process 9
+2018/01/25 14:26:15 [notice] 1#1: start worker process 10
+2018/01/25 14:26:23 [notice] 1#1: signal 15 (SIGTERM) received, exiting
+2018/01/25 14:26:23 [notice] 7#7: exiting
+2018/01/25 14:26:23 [notice] 7#7: exit
+2018/01/25 14:26:23 [notice] 8#8: exiting
+2018/01/25 14:26:23 [notice] 9#9: exiting
+2018/01/25 14:26:23 [notice] 9#9: exit
+2018/01/25 14:26:23 [notice] 8#8: exit
+2018/01/25 14:26:23 [notice] 10#10: exiting
+2018/01/25 14:26:23 [notice] 10#10: exit
+2018/01/25 14:26:23 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 14:26:23 [notice] 1#1: worker process 7 exited with code 0
+2018/01/25 14:26:23 [notice] 1#1: worker process 9 exited with code 0
+2018/01/25 14:26:23 [notice] 1#1: worker process 10 exited with code 0
+2018/01/25 14:26:23 [notice] 1#1: signal 29 (SIGIO) received
+2018/01/25 14:26:23 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 14:26:23 [notice] 1#1: signal 17 (SIGCHLD) received
+2018/01/25 14:26:23 [notice] 1#1: worker process 8 exited with code 0
+2018/01/25 14:26:23 [notice] 1#1: exit

@@ -8,12 +8,15 @@ services:
     volumes:
       - ./:/app
       - ./html:/usr/share/nginx/html
+      - ./docker/php/zz-docker.conf:/usr/local/etc/php-fpm.d/zz-docker.conf
+      - ./docker/sock:/sock
     expose:
       - 9000
     links:
       - mysql
   nginx:
-    image: openresty/openresty
+    build:
+      context: ./docker/nginx
     ports:
       - 8003:80
     volumes:
@@ -23,13 +26,15 @@ services:
       - ./docker/nginx/server.conf:/usr/local/openresty/nginx/conf/conf.d/server.conf
       - ./docker/nginx/log:/var/log/nginx
       - ./lua:/usr/share/nginx/lua
-      #- ./docker/nginx/vhost.conf:/etc/nginx/conf.d/vhost.conf
+      - ./docker/sock:/sock
     #volumes_from:
     #  - app
     links:
       - app
     environment:
       NLA_CONFIG_COOKIE_KEY: "change this default key, please"
+    depends_on:
+      - app
   mysql:
     image: mysql:5.7
     volumes:
