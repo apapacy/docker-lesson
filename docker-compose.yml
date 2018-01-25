@@ -3,6 +3,8 @@ services:
   app:
     build:
       context: ./docker/php
+      args:
+        UID: "3000"
       # dockerfile: docker/php/Dockerfile
     working_dir: /app
     volumes:
@@ -17,6 +19,8 @@ services:
   nginx:
     build:
       context: ./docker/nginx
+      args:
+        UID: "3000"
     ports:
       - 8003:80
     volumes:

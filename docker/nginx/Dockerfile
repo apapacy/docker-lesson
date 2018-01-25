@@ -1,3 +1,4 @@
 FROM openresty/openresty
-RUN addgroup -g 3000 -S app
-RUN adduser -u 3000 -S -D -H -G app app
+ARG UID
+RUN addgroup -g $UID -S app
+RUN adduser -u $UID -S -D -H -G app app
