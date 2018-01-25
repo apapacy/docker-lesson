@@ -1,0 +1,33 @@
+2018/01/24 18:57:59 [error] 7#7: *3 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: local, request: "GET /app.php?7898898 HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "local:8003"
+2018/01/24 18:58:11 [error] 7#7: *5 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: local, request: "GET /app.php?7898898 HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "local:8003"
+2018/01/24 18:58:44 [error] 7#7: *5 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: local, request: "GET /a.php?7898898 HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "local:8003"
+2018/01/24 18:58:47 [error] 7#7: *5 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: local, request: "GET /a.php?7898898 HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "local:8003"
+2018/01/24 18:58:49 [error] 7#7: *5 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: local, request: "GET /a.php?78988988 HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "local:8003"
+2018/01/24 18:59:05 [error] 7#7: *10 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: local, request: "GET /a.php?78988988 HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "local:8003"
+2018/01/24 19:01:35 [error] 7#7: *1 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: local, request: "GET /a.php?78988988 HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "local:8003"
+2018/01/24 19:01:37 [error] 7#7: *1 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: local, request: "GET /a.php?78988988 HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "local:8003"
+2018/01/24 19:05:01 [error] 7#7: *1 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: local, request: "GET /app.php/a.php HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "local:8003"
+2018/01/25 12:01:55 [error] 7#7: *1 lua entry thread aborted: runtime error: /lua/nla.lua:3: attempt to index local 'whitelist' (a nil value)
+stack traceback:
+coroutine 0:
+	/lua/nla.lua: in function </lua/nla.lua:1>, client: 172.18.0.1, server: local, request: "GET /index.html HTTP/1.1", host: "local:8003"
+2018/01/25 12:02:41 [error] 7#7: *2 lua entry thread aborted: runtime error: /lua/nla.lua:3: attempt to index local 'whitelist' (a nil value)
+stack traceback:
+coroutine 0:
+	/lua/nla.lua: in function </lua/nla.lua:1>, client: 172.18.0.1, server: local, request: "GET /iapp.php HTTP/1.1", host: "local:8003"
+2018/01/25 12:02:45 [error] 7#7: *3 lua entry thread aborted: runtime error: /lua/nla.lua:3: attempt to index local 'whitelist' (a nil value)
+stack traceback:
+coroutine 0:
+	/lua/nla.lua: in function </lua/nla.lua:1>, client: 172.18.0.1, server: local, request: "GET /app.php HTTP/1.1", host: "local:8003"
+2018/01/25 12:05:12 [error] 7#7: *1 lua entry thread aborted: runtime error: /usr/share/nginx/lua/nla.lua:3: attempt to index local 'whitelist' (a nil value)
+stack traceback:
+coroutine 0:
+	/usr/share/nginx/lua/nla.lua: in function </usr/share/nginx/lua/nla.lua:1>, client: 172.18.0.1, server: local, request: "GET /app.php HTTP/1.1", host: "local:8003"
+2018/01/25 12:05:15 [error] 7#7: *2 lua entry thread aborted: runtime error: /usr/share/nginx/lua/nla.lua:3: attempt to index local 'whitelist' (a nil value)
+stack traceback:
+coroutine 0:
+	/usr/share/nginx/lua/nla.lua: in function </usr/share/nginx/lua/nla.lua:1>, client: 172.18.0.1, server: local, request: "GET /app.php HTTP/1.1", host: "local:8003"
+2018/01/25 12:05:21 [error] 7#7: *3 lua entry thread aborted: runtime error: /usr/share/nginx/lua/nla.lua:3: attempt to index local 'whitelist' (a nil value)
+stack traceback:
+coroutine 0:
+	/usr/share/nginx/lua/nla.lua: in function </usr/share/nginx/lua/nla.lua:1>, client: 172.18.0.1, server: local, request: "GET /index.html HTTP/1.1", host: "local:8003"
