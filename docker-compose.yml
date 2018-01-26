@@ -24,13 +24,13 @@ services:
     ports:
       - 8003:80
     volumes:
-      - ./:/app
-      - ./html:/usr/share/nginx/html
+      - ./:/app/
+      - ./html/:/usr/share/nginx/html/
       - ./docker/nginx/nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf
-      - ./docker/nginx/server.conf:/usr/local/openresty/nginx/conf/conf.d/server.conf
-      - ./docker/nginx/log:/var/log/nginx
-      - ./lua:/usr/share/nginx/lua
-      - ./docker/sock:/sock
+      - ./docker/nginx/conf.d/:/usr/local/openresty/nginx/conf/conf.d/
+      - ./docker/nginx/log/:/var/log/nginx/
+      - ./lua/:/usr/share/nginx/lua/
+      - ./docker/sock/:/sock/
     #volumes_from:
     #  - app
     links:
@@ -40,7 +40,11 @@ services:
     depends_on:
       - app
   mysql:
-    image: mysql:5.7
+    image:  mysql:5.7
+    #build:
+    #  context: ./docker/mysql
+    #  args:
+    #    UID: "3000"
     volumes:
       - ./docker/mysql/data:/var/lib/mysql
     ports:
@@ -51,8 +55,11 @@ services:
       MYSQL_USER: dbuser
       MYSQL_PASSWORD: dbpassword
   mongodb:
-    build:
-      context: ./docker/mongodb
+    image: mongo:3.6
+    #build:
+    #  context: ./docker/mongodb
+    #  args:
+    #    UID: "3000"
     ports:
       - 27017:27017
     volumes:
