@@ -1,6 +1,7 @@
 version: "3"
 services:
-  app:
+  php:
+    container_name: php
     build:
       context: ./docker/php
       args:
@@ -8,15 +9,14 @@ services:
       # dockerfile: docker/php/Dockerfile
     working_dir: /app
     volumes:
-      - ./:/app
-      - ./html:/usr/local/openresty/nginx/html
-      - ./docker/php/zz-docker.conf:/usr/local/etc/php-fpm.d/zz-docker.conf
+      - ../../brander/_aurafit:/app
+      - ../../brander/_aurafit:/usr/local/openresty/nginx/html
+      - ./docker/php/zz-docker.conf:/etc/php/5.6/fpm/pool.d/www.conf
       - ./docker/sock:/sock
-    expose:
-      - 9000
-    links:
+    depends_on:
       - mysql
   nginx:
+    container_name: nginx
     build:
       context: ./docker/nginx
       args:
@@ -25,7 +25,7 @@ services:
       - 8003:80
     volumes:
       - ./:/app/
-      - ./html/:/usr/local/openresty/nginx/html/
+      - ../../brander/_aurafit/:/usr/local/openresty/nginx/html/
       - ./docker/nginx/nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf
       - ./docker/nginx/conf.d/:/usr/local/openresty/nginx/conf/conf.d/
       - ./docker/nginx/log/:/var/log/nginx/
@@ -34,35 +34,24 @@ services:
     #volumes_from:
     #  - app
     links:
-      - app
-      - mysql
+      - php
     environment:
       NLA_CONFIG_COOKIE_KEY: "change this default key, please"
     depends_on:
-      - app
+      - php
+      - mysql
   mysql:
-    image:  mysql:5.7
-    #build:
-    #  context: ./docker/mysql
-    #  args:
-    #    UID: "3000"
+    build:
+      context: ./docker/mysql
+      #args:
+      #  UID: "3000"
+    container_name: mysql
     volumes:
       - ./docker/mysql/data:/var/lib/mysql
     ports:
-      - 3307:3306
+      - 3306:3306
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: dbname
-      MYSQL_USER: dbuser
-      MYSQL_PASSWORD: dbpassword
-  mongodb:
-    image: mongo:3.6
-    #build:
-    #  context: ./docker/mongodb
-    #  args:
-    #    UID: "3000"
-    ports:
-      - 27017:27017
-    volumes:
-      - ./docker/mongodb/data/configdb:/data/configdb
-      - ./docker/mongodb/data/db:/data/db
+      MYSQL_DATABASE: aurafit
+      MYSQL_USER: aurafit
+      MYSQL_PASSWORD: aurafit
