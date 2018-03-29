@@ -9,7 +9,7 @@ services:
     working_dir: /app
     volumes:
       - ./:/app
-      - ./html:/usr/share/nginx/html
+      - ./html:/usr/local/openresty/nginx/html
       - ./docker/php/zz-docker.conf:/usr/local/etc/php-fpm.d/zz-docker.conf
       - ./docker/sock:/sock
     expose:
@@ -17,11 +17,6 @@ services:
     links:
       - mysql
   nginx:
-    logging:
-      driver: "json-file"
-      options:
-        max-size: "1k"
-        max-file: "10"
     build:
       context: ./docker/nginx
       args:
@@ -30,18 +25,17 @@ services:
       - 8003:80
     volumes:
       - ./:/app/
-      - ./html/:/usr/share/nginx/html/
+      - ./html/:/usr/local/openresty/nginx/html/
       - ./docker/nginx/nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf
       - ./docker/nginx/conf.d/:/usr/local/openresty/nginx/conf/conf.d/
-      #- ./docker/nginx/log/:/var/log/nginx/
-      - /dev/fd/1:/dev/fd/1
-      - /dev/fd/2:/dev/fd/2
+      - ./docker/nginx/log/:/var/log/nginx/
       - ./lua/:/usr/share/nginx/lua/
       - ./docker/sock/:/sock/
     #volumes_from:
     #  - app
     links:
       - app
+      - mysql
     environment:
       NLA_CONFIG_COOKIE_KEY: "change this default key, please"
     depends_on:
