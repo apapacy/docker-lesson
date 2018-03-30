@@ -30,9 +30,7 @@ RUN apt-get update && \
 
 ARG UID
 
-RUN addgroup --gid $UID --system app \
- && adduser --uid $UID --system --disabled-login --disabled-password --gid $UID app \
- && usermod  -g 6 app \
+RUN useradd  -u $UID app \
  && mkdir -p /run && mkdir -p  /run/php/
 
 CMD ["/usr/sbin/php-fpm5.6", "--nodaemonize"]
