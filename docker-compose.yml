@@ -5,7 +5,7 @@ services:
     build:
       context: ./docker/php
       args:
-        UID: $UID
+        - UID
       # dockerfile: docker/php/Dockerfile
     working_dir: /usr/local/openresty/nginx/html
     volumes:
@@ -21,7 +21,7 @@ services:
     build:
       context: ./docker/nginx
       args:
-        UID: $UID
+        - UID
     ports:
       - 8003:80
       - 443:443

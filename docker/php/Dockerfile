@@ -33,4 +33,6 @@ ARG UID
 RUN useradd  -u $UID app \
  && mkdir -p /run && mkdir -p /run/php/
 
+EXPOSE 9000
+
 CMD ["/usr/sbin/php-fpm5.6", "--nodaemonize"]
