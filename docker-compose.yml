@@ -24,12 +24,15 @@ services:
         UID: $UID
     ports:
       - 8003:80
+      - 443:443
     volumes:
       - ./:/app/
       - ../../brander/_aurafit/:/usr/local/openresty/nginx/html/
       - ./docker/nginx/nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf
       - ./docker/nginx/conf.d/:/usr/local/openresty/nginx/conf/conf.d/
       - ./docker/nginx/log/:/var/log/nginx/
+      - ./docker/nginx/ssl/aurafit.key:/root/ssl/aurafit.key
+      - ./docker/nginx/ssl/chained.crt:/root/ssl/chained.crt
       - ./lua/:/usr/share/nginx/lua/
       - ./docker/sock/:/sock/
     #volumes_from:
@@ -49,6 +52,7 @@ services:
     container_name: d_mysql
     volumes:
       - ./docker/mysql/data:/var/lib/mysql
+      - ./docker/mysql/my.cnf:/etc/mysql/conf.d/aura.cnf
     ports:
       - 23306:3306
     environment:

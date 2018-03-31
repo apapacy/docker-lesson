@@ -1,3 +1,4 @@
 /docker/mysql/data
 /docker/mongodb/data
 /docker/nginx/log
+/docker/nginx/ssl
