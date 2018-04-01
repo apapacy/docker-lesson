@@ -11,7 +11,6 @@ services:
     volumes:
       - ../../brander/_aurafit:/usr/local/openresty/nginx/html
       - ./docker/php/zz-docker.conf:/etc/php/5.6/fpm/pool.d/www.conf
-      - ./docker/php/php.ini:/etc/php/5.6/fpm/php.ini
       - ./docker/sock:/sock
     links:
       - mysql

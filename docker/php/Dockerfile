@@ -30,6 +30,8 @@ RUN apt-get update && \
 
 ARG UID
 
+COPY php.ini /etc/php/5.6/fpm/php.ini
+
 RUN useradd  -u $UID app \
  && mkdir -p /run && mkdir -p /run/php/
 
