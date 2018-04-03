@@ -6,16 +6,16 @@ RUN dpkg-reconfigure --frontend noninteractive tzdata
 
 ARG POSTFIX_MYNETWORKS
 
-RUN apt-get update && apt-get install -y postfix rsyslog vim
+RUN apt-get update && apt-get install -y postfix rsyslog vim mutt
 
 # Конфигурация postfix для обработки писем через opendkim и создание лог-файла
 
 RUN \
  postconf -e "mydestination = localhost" && \
  postconf -e "mynetworks = 127.0.0.0/8 [::ffff:127.0.0.0]/104 [::1]/128 $POSTFIX_MYNETWORKS" && \
- postconf -e "relay_domains = gmail.com" && \
+ postconf -e "myhostname = auafit.com.ua" && \
+ postconf -e "relay_domains = meta.ua" && \
  postconf -e "always_bcc = root@localhost" && \
- postconf -e "mynetworks = " && \
   touch /var/log/mail.log
 
 # RUN \
@@ -25,7 +25,9 @@ RUN \
 #  postconf -e milter_protocol=2 && \
 #  postconf -e smtpd_milters=inet:dkim:8891 && \
 #  postconf -e non_smtpd_milters=inet:dkim:8891 && \
-#  touch /var/log/mail.log
+#  touch /var/log/mail.
+#  LC_CTYPE=C.UTF-8    mutt -f  /var/mail/root
+
 
 
 

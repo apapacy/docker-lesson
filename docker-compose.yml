@@ -69,8 +69,10 @@ services:
       context: ./docker/postfix
       args:
        - POSTFIX_MYNETWORKS=172.16.0.0/12
-    ports:
-      - 25:25
+    volumes:
+      - ./docker/postfix/mail:/var/mail
+    #ports:
+    #  - 25:25
     depends_on:
       - dkim
       # - php
