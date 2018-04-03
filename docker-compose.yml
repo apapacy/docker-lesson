@@ -14,8 +14,11 @@ services:
       - ./docker/sock:/sock
     links:
       - mysql
+      - postfix
     depends_on:
       - mysql
+      - postfix
+    # network_mode: bridge
   nginx:
     container_name: d_nginx
     build:
@@ -60,3 +63,27 @@ services:
       MYSQL_DATABASE: aurafit
       MYSQL_USER: aurafit
       MYSQL_PASSWORD: aurafit
+  postfix:
+    container_name: d_postfix
+    build:
+      context: ./docker/postfix
+      args:
+       - POSTFIX_MYNETWORKS=172.16.0.0/12
+    ports:
+      - 25:25
+    depends_on:
+      - dkim
+      # - php
+    links:
+      - dkim
+      #- php
+  dkim:
+    container_name: d_dkim
+    build:
+      context: ./docker/dkim
+      args:
+        - DKIM_DOMAIN=aurafit.com.ua
+        - DKIM_SELECTOR=mail
+        - DKIM_INTERNAL=127.0.0.1
+    expose:
+       - 8891
