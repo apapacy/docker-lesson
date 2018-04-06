@@ -1,5 +1,5 @@
 /docker/mysql/data
 /docker/mongodb/data
 /docker/nginx/log
-/docker/nginx/
+/docker/nginx/ssl
 /docker/postfix/mail
