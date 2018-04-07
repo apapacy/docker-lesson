@@ -69,6 +69,7 @@ services:
       context: ./docker/postfix
       args:
        - POSTFIX_MYNETWORKS=172.16.0.0/12
+       - UID
     volumes:
       - ./docker/postfix/mail:/var/mail
     #ports:
