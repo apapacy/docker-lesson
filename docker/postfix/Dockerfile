@@ -6,21 +6,38 @@ RUN dpkg-reconfigure --frontend noninteractive tzdata
 
 ARG POSTFIX_MYNETWORKS
 
-RUN apt-get update && apt-get install -y postfix rsyslog vim mutt sasl2-bin
+RUN apt-get update && apt-get install -y postfix rsyslog vim mutt sasl2-bin libsasl2-modules telnet
 
 # Конфигурация postfix для обработки писем через opendkim и создание лог-файла
 
 ARG UID
 
 RUN \
+ postconf -F '*/*/chroot = n' && \
  postconf -e "mydestination = localhost" && \
- postconf -e "mynetworks = 127.0.0.0/8 [::ffff:127.0.0.0]/104 [::1]/128 $POSTFIX_MYNETWORKS 0.0.0.0" && \
+ postconf -e "mynetworks = 127.0.0.0/8 [::ffff:127.0.0.0]/104 [::1]/128" && \
  postconf -e "myhostname = aurafit.com.ua" && \
- postconf -e "relay_domains = meta.ua" && \
  postconf -e "always_bcc = www-aura@localhost" && \
+ postconf -e "smtpd_sasl_auth_enable=yes" && \
+ postconf -e "broken_sasl_auth_clients=yes" && \
+ postconf -e "smtpd_recipient_restrictions=permit_sasl_authenticated,reject_unauth_destination" && \
+ postconf -e "broken_sasl_auth_clients = yes" && \
+ postconf -e "smtpd_sasl_security_options = noanonymous" && \
+ echo 123456 | saslpasswd2 -c -p -u aurafit.com.ua -a smtpd postfix && \
+ echo 123456 | saslpasswd2 -c -p -u aurafit.com.ua  postfix && \
  useradd -u $UID www-aura && \
- touch /var/log/mail.log && \
- echo postfix | saslpasswd2 -c -p postfix
+ adduser postfix sasl && \
+ chown postfix.sasl /etc/sasldb2 && \
+ touch /var/log/mail.log
+
+
+COPY ./smtpd.conf /etc/postfix/sasl/smtpd.conf
+
+
+#COPY ./smtpd.conf /usr/local/lib/sasl2/smtpd.conf
+#COPY ./smtpd.conf /usr/lib/sasl2/smtpd.conf
+
+
 
 # RUN \
 #  postconf -e "mydestination = localhost" && \
@@ -38,6 +55,7 @@ RUN \
 #postconf -e "smtpd_sender_restrictions = permit_sasl_authenticated" && \
 #postconf -e "smtpd_recipient_restrictions = permit_mynetworks, permit_sasl_authenticated, permit_auth_destination, reject_unauth_destination" && \
 #postconf -e "broken_sasl_auth_clients = no" && \
+#echo postfix | saslpasswd2 -c -p postfix
 
 
 
