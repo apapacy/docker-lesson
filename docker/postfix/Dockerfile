@@ -20,7 +20,6 @@ RUN \
   postconf -e "smtpd_sasl_auth_enable=yes" && \
   postconf -e "broken_sasl_auth_clients=yes" && \
   postconf -e "smtpd_relay_restrictions=permit_sasl_authenticated, reject_unauth_destination" && \
-  postconf -e "smtpd_recipient_restrictions=reject_unauth_destination" && \
   postconf -e "smtpd_sasl_security_options=noanonymous" && \
   postconf -e "smtpd_use_tls = yes" && \
   postconf -e "smtpd_tls_key_file = /etc/ssl/smtpd.key" && \
@@ -38,6 +37,7 @@ RUN \
 
 COPY ./smtpd.conf /etc/postfix/sasl/smtpd.conf
 
+#postconf -e "smtpd_recipient_restrictions=permit_sasl_authenticated, reject_unauth_destination" && \
 # postconf -e "smtpd_recipient_restrictions=permit_sasl_authenticated,reject_unauth_destination" && \
 # postconf -e "smtpd_client_restrictions = permit_sasl_authenticated,reject_unauth_destination" && \
 # postconf -F '*/*/chroot = y' && \
