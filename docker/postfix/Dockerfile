@@ -10,8 +10,10 @@ RUN \
   dpkg-reconfigure --frontend noninteractive tzdata && \
   apt-get install -y postfix rsyslog vim mutt sasl2-bin
 
-RUN openssl req -new -x509 -nodes -out /etc/ssl/smtpd.pem -keyout /etc/ssl/smtpd.key -days 3650 -subj '/C=UA/ST=Kharkov/L=Kharkov/CN=aurafit.com.ua' && \
- openssl pkcs12 -inkey /etc/ssl/smtpd.key -in /etc/ssl/smtpd.pem -export -out /etc/ssl/smtpd.srt -passout pass:
+RUN openssl req -new -x509 -nodes \
+  -out /etc/ssl/smtpd.srt  -keyout /etc/ssl/smtpd.key  -pubkey  \
+  -days 3650 -subj '/C=UA/ST=Kharkov/L=Kharkov/CN=aurafit.com.ua' && \
+  openssl rsa -in /etc/ssl/smtpd.key -pubout -out /etc/ssl/smtpd.pem
 
 RUN \
   postconf -e "mydestination = localhost" && \
