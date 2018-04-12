@@ -10,10 +10,6 @@ RUN \
   dpkg-reconfigure --frontend noninteractive tzdata && \
   apt-get install -y postfix rsyslog vim mutt sasl2-bin
 
-RUN openssl req -new -x509 -nodes \
-  -out /etc/ssl/smtpd.srt  -keyout /etc/ssl/smtpd.key  -pubkey  \
-  -days 3650 -subj '/C=UA/ST=Kharkov/L=Kharkov/CN=aurafit.com.ua' && \
-  openssl rsa -in /etc/ssl/smtpd.key -pubout -out /etc/ssl/smtpd.pem
 
 RUN \
   postconf -e "mydestination = localhost" && \
@@ -23,13 +19,6 @@ RUN \
   postconf -e "broken_sasl_auth_clients=yes" && \
   postconf -e "smtpd_relay_restrictions=permit_sasl_authenticated, reject_unauth_destination" && \
   postconf -e "smtpd_sasl_security_options=noanonymous" && \
-  postconf -e "smtpd_use_tls = yes" && \
-  postconf -e "smtpd_tls_key_file = /etc/ssl/smtpd.key" && \
-  postconf -e "smtpd_tls_cert_file = /etc/ssl/smtpd.pem" && \
-  postconf -e "smtpd_tls_CAfile = /etc/ssl/smtpd.srt" && \
-  postconf -e "smtpd_tls_loglevel = 1" && \
-  postconf -e "smtpd_tls_received_header = yes" && \
-  postconf -e "smtpd_tls_session_cache_timeout = 3600s" && \
   postconf -e "tls_random_source = dev:/dev/urandom" && \
   echo 123456 | saslpasswd2 -c -p -u aurafit.com.ua postfix && \
   ln  /etc/sasldb2 /var/spool/postfix/etc/sasldb2 && \
