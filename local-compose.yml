@@ -1,0 +1,60 @@
+version: "3"
+services:
+  php:
+    container_name: l_php
+    build:
+      context: ./docker/php
+      args:
+        - UID
+      # dockerfile: docker/php/Dockerfile
+    working_dir: /usr/local/openresty/nginx/html
+    volumes:
+      - ../../brander/_aurafit:/usr/local/openresty/nginx/html
+      - ./docker/php/zz-docker.conf:/etc/php/5.6/fpm/pool.d/www.conf
+      - ./docker/sock:/sock
+    links:
+      - mysql
+    depends_on:
+      - mysql
+    # network_mode: bridge
+  nginx:
+    container_name: l_nginx
+    build:
+      context: ./docker/nginx
+      args:
+        - UID
+    ports:
+      - 8003:80
+    volumes:
+      - ./:/app/
+      - ../../brander/_aurafit/:/usr/local/openresty/nginx/html/
+      - ./docker/nginx/nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf
+      - ./docker/nginx/local.d/:/usr/local/openresty/nginx/conf/conf.d/
+      - ./docker/nginx/log/:/var/log/nginx/
+      - ./lua/:/usr/share/nginx/lua/
+      - ./docker/sock/:/sock/
+    #volumes_from:
+    #  - app
+    links:
+      - php
+    environment:
+      NLA_CONFIG_COOKIE_KEY: "change this default key, please"
+    depends_on:
+      - php
+      - mysql
+  mysql:
+    build:
+      context: ./docker/mysql
+      #args:
+      #  UID: "3000"
+    container_name: l_mysql
+    volumes:
+      - ./docker/mysql/data:/var/lib/mysql
+      - ./docker/mysql/my.cnf:/etc/mysql/conf.d/aura.cnf
+    ports:
+      - 23306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: aurafit
+      MYSQL_USER: aurafit
+      MYSQL_PASSWORD: aurafit
